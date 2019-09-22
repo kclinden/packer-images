@@ -1,0 +1,145 @@
+{
+  "builds": [
+    {
+      "name": "vmware-iso",
+      "builder_type": "vmware-iso",
+      "build_time": 1569157985,
+      "files": [
+        {
+          "name": "disk-s001.vmdk",
+          "size": 1182859264
+        },
+        {
+          "name": "disk-s002.vmdk",
+          "size": 357761024
+        },
+        {
+          "name": "disk-s003.vmdk",
+          "size": 36962304
+        },
+        {
+          "name": "disk-s004.vmdk",
+          "size": 11862016
+        },
+        {
+          "name": "disk-s005.vmdk",
+          "size": 269418496
+        },
+        {
+          "name": "disk-s006.vmdk",
+          "size": 222953472
+        },
+        {
+          "name": "disk-s007.vmdk",
+          "size": 59637760
+        },
+        {
+          "name": "disk-s008.vmdk",
+          "size": 48431104
+        },
+        {
+          "name": "disk-s009.vmdk",
+          "size": 18153472
+        },
+        {
+          "name": "disk-s010.vmdk",
+          "size": 30343168
+        },
+        {
+          "name": "disk.vmdk",
+          "size": 830
+        },
+        {
+          "name": "packer-vmware-iso.nvram",
+          "size": 8684
+        },
+        {
+          "name": "packer-vmware-iso.vmsd",
+          "size": 0
+        },
+        {
+          "name": "packer-vmware-iso.vmx",
+          "size": 3454
+        },
+        {
+          "name": "packer-vmware-iso.vmxf",
+          "size": 272
+        }
+      ],
+      "artifact_id": "packer-vmware-iso",
+      "packer_run_uuid": "d6a00c3b-0051-a3d4-4e28-bd23b999c6b3",
+      "custom_data": null
+    },
+    {
+      "name": "vmware-iso",
+      "builder_type": "vmware-iso",
+      "build_time": 1569158692,
+      "files": [
+        {
+          "name": "disk-s001.vmdk",
+          "size": 1190264832
+        },
+        {
+          "name": "disk-s002.vmdk",
+          "size": 26214400
+        },
+        {
+          "name": "disk-s003.vmdk",
+          "size": 182517760
+        },
+        {
+          "name": "disk-s004.vmdk",
+          "size": 49676288
+        },
+        {
+          "name": "disk-s005.vmdk",
+          "size": 269418496
+        },
+        {
+          "name": "disk-s006.vmdk",
+          "size": 226820096
+        },
+        {
+          "name": "disk-s007.vmdk",
+          "size": 1048576
+        },
+        {
+          "name": "disk-s008.vmdk",
+          "size": 226623488
+        },
+        {
+          "name": "disk-s009.vmdk",
+          "size": 61997056
+        },
+        {
+          "name": "disk-s010.vmdk",
+          "size": 36438016
+        },
+        {
+          "name": "disk.vmdk",
+          "size": 830
+        },
+        {
+          "name": "packer-vmware-iso.nvram",
+          "size": 8684
+        },
+        {
+          "name": "packer-vmware-iso.vmsd",
+          "size": 0
+        },
+        {
+          "name": "packer-vmware-iso.vmx",
+          "size": 3454
+        },
+        {
+          "name": "packer-vmware-iso.vmxf",
+          "size": 272
+        }
+      ],
+      "artifact_id": "packer-vmware-iso",
+      "packer_run_uuid": "f00e3b89-c868-f38a-ea48-75e99702559d",
+      "custom_data": null
+    }
+  ],
+  "last_run_uuid": "f00e3b89-c868-f38a-ea48-75e99702559d"
+}

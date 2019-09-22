@@ -51,12 +51,20 @@
       },
       {
         "type": "inspec",
-        "profile": "https://github.com/dev-sec/linux-baseline",
-        "user": "hladmin"
+        "profile": "https://github.com/kclinden/linux-baseline",
+        "user": "hladmin",
+        "extra_arguments": [ "--no-distinct-exit" ]
       },
       {
         "type": "shell",
         "inline": ["echo 'template build complete'"]
+      }
+    ],
+    "post-processors": [
+      {
+        "type": "manifest",
+        "output": "manifest.json",
+        "strip_path": true
       }
     ]
   }
