@@ -1,0 +1,14 @@
+{
+
+    "builders": [
+        {
+            "type": "vmware-iso",
+            "iso_url": "/Users/klinden/Downloads/CentOS-7-x86_64-Minimal-1810.iso ",
+            "iso_checksum": "bd43d41e01c2a46b3cb23eb9139dce4b",
+            "iso_checksum_type": "md5",
+            "ssh_username": "admin",
+            "ssh_password": "VMware1!",
+            "shutdown_command": "shutdown now"
+          }
+    ]
+  }

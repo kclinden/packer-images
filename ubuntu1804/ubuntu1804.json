@@ -1,0 +1,62 @@
+{
+    "variables": {
+      "ssh_username":"hladmin",
+      "ssh_password":"VMware1!"
+
+    },
+    "builders": [
+        {
+            "type": "vmware-iso",
+            "iso_url": "http://cdimage.ubuntu.com/releases/18.04.3/release/ubuntu-18.04.3-server-amd64.iso",
+            "iso_checksum": "97f4cb265e01811f95cfa607286827b37720f5e0",
+            "iso_checksum_type": "sha1",
+            "ssh_username": "{{user `ssh_username`}}",
+            "ssh_password": "{{user `ssh_password`}}",
+            "shutdown_command": "sudo shutdown -P now",
+            "cpus": 1,
+            "version": 13,
+            "cores": 2,
+            "memory": 2048,
+            "disk_size": 40000,
+            "floppy_files": [
+                "./preseed.cfg"
+              ],
+              "boot_wait": "10s",
+        "boot_command": [
+          "<enter><wait><f6><wait><esc><wait>",
+          "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+          "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+          "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+          "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+          "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+          "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+          "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+          "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+          "<bs><bs><bs>",
+          "/install/vmlinuz",
+          " initrd=/install/initrd.gz",
+          " priority=critical",
+          " locale=en_US",
+          " file=/media/preseed.cfg",
+          "<enter>"
+        ]
+          }
+    ],
+    "provisioners": [
+      {
+        "type": "ansible",
+        "user": "{{user `ssh_username`}}",
+        "playbook_file": "./playbook.yml",
+        "extra_arguments": [ "--extra-vars", "ansible_sudo_pass={{user `ssh_password`}}", "--become" ]
+      },
+      {
+        "type": "inspec",
+        "profile": "https://github.com/dev-sec/linux-baseline",
+        "user": "hladmin"
+      },
+      {
+        "type": "shell",
+        "inline": ["echo 'template build complete'"]
+      }
+    ]
+  }
